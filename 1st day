@@ -1,0 +1,64 @@
+Java program to check if the given number is Prime?
+We can write a simple program to divide the given number “n” from 2 to n/2 and check the remainder. If the remainder is 0, then it’s not a prime number.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+import java.util.*;
+public class Main
+{
+    public static boolean isprime(int n){
+        if(n==0|| n==1){
+            return false;
+        }
+        if(n==2){
+            return true;
+        }
+        for(int i=2; i<=n/2; i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("enetr the numbers: ");
+	    int n = sc.nextInt();
+	    
+		System.out.println(isprime(n));
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2. How to remove leading and trailing whitespaces from a string?
+ with the help of strip() and trim() method we can remove the leadiing and trailing whiitespace from a string.
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String s = " abc def\t";
+	    s= s.strip();
+	    
+		System.out.println(s);
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3. Revese a Linked List?
+LinkedList descendingIterator() returns an iterator that iterates over the element in the reverse order. We can use this iterator to create a new Linked List with elements in the reverse order.
+********************************************************************************************************
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    LinkedList<Integer> a= new LinkedList<>();
+	    a.add(1);
+	    a.add(2);
+	    a.add(3);
+	    System.out.println(a);
+	    LinkedList<Integer> a1=new LinkedList<>();
+	   a.descendingIterator().forEachRemaining(a1::add);
+	    System.out.println(a1);
+	    
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
